@@ -1,10 +1,19 @@
 #include <iostream>
-#include <zmqpp/zmqpp.hpp>
+
+
+class Server {
+public:
+    static Server get() {
+        return instance;
+    }
+
+private:
+    Server() = default;
+    static Server instance;
+};
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    zmqpp::context context;
-    context.terminate();
+
     return 0;
 }
