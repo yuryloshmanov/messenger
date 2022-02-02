@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.21)
 project(Server)
 
 set(CMAKE_CXX_STANDARD 20)
-SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_executable(server main.cpp)
+add_executable(server main.cpp include/Server.hpp)
 target_link_libraries(server ${CONAN_LIBS})
