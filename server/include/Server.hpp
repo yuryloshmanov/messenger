@@ -17,7 +17,7 @@ public:
 
     // Configuration for server pull socket end point
     // Using current ip-address
-    static void configurePullSocketEndPoint(const std::string &endPoint);
+    void configurePullSocketEndPoint(const std::string &endPoint);
 
 private:
     zmqpp::context context{};
@@ -27,8 +27,6 @@ private:
 
     // Private constructor & instance for singleton pattern
     Server() = default;
-
-    static Server instance;
 };
 
 

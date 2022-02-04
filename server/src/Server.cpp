@@ -10,6 +10,7 @@
 
 
 Server &Server::get() {
+    static Server instance;
     return instance;
 }
 
@@ -34,4 +35,5 @@ void Server::configurePullSocketEndPoint(const std::string &endPoint) {
     }
 
     std::string result(ipBuffer);
+    pullSocket.bind("tcp://" + endPoint + ":4040");
 }
