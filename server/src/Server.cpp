@@ -15,7 +15,7 @@ Server &Server::get() {
 }
 
 
-void Server::configurePullSocketEndPoint(const std::string &endPoint) {
+void Server::configurePullSocketEndPoint() {
     char buffer[256];
     char *ipBuffer;
     struct hostent *host_entry;
@@ -35,5 +35,5 @@ void Server::configurePullSocketEndPoint(const std::string &endPoint) {
     }
 
     std::string result(ipBuffer);
-    pullSocket.bind("tcp://" + endPoint + ":4040");
+    pullSocket.bind("tcp://" + std::string(ipBuffer) + ":4040");
 }
