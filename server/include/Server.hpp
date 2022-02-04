@@ -15,6 +15,8 @@ public:
     // Get instance of Server class
     static Server &get();
 
+    // Main function for server
+    // Starts server
     void run();
 
 private:
