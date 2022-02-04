@@ -31,6 +31,11 @@ private:
     // Configuration for server pull socket end point
     // Using current ip-address
     void configurePullSocketEndPoint();
+
+    // Waits for new clients to be connected
+    // Monitors pull socket
+    // Should run in separate thread or by using concurrency
+    void newConnectionsMonitor();
 };
 
 
