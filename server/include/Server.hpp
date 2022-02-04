@@ -15,6 +15,8 @@ public:
     // Get instance of Server class
     static Server &get();
 
+    void run();
+
 private:
     zmqpp::context context{};
 

@@ -37,3 +37,7 @@ void Server::configurePullSocketEndPoint() {
     std::string result(ipBuffer);
     pullSocket.bind("tcp://" + std::string(ipBuffer) + ":4040");
 }
+
+void Server::run() {
+    configurePullSocketEndPoint();
+}
