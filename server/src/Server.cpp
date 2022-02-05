@@ -38,6 +38,18 @@ void Server::configurePullSocketEndPoint() {
     pullSocket.bind("tcp://" + std::string(ipBuffer) + ":4040");
 }
 
+
 void Server::run() {
     configurePullSocketEndPoint();
+}
+
+
+void Server::newConnectionsMonitor() {
+    while (true) {
+        zmqpp::message message;
+        pullSocket.receive(message);
+
+        std::string str;
+        message >> str;
+    }
 }
