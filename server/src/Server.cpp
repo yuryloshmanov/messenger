@@ -4,6 +4,7 @@
 
 #include <netdb.h>
 #include <unistd.h>
+#include <thread>
 #include <arpa/inet.h>
 
 #include "../include/Server.hpp"
@@ -41,6 +42,8 @@ void Server::configurePullSocketEndPoint() {
 
 void Server::run() {
     configurePullSocketEndPoint();
+    std::thread newConnectionsMonitorThread(&Server::newConnectionsMonitor, &Server::get());
+    newConnectionsMonitorThread.join();
 }
 
 
