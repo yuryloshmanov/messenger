@@ -47,10 +47,10 @@ void Server::run() {
 }
 
 
-void Server::newConnectionsMonitor() {
+[[noreturn]] void Server::newConnectionsMonitor() {
     while (true) {
         zmqpp::message message;
-        pullSocket.receive(message);
+        pullSocket.receive(message); // blocks
 
         std::string str;
         message >> str;

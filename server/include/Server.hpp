@@ -35,7 +35,7 @@ private:
     // Waits for new clients to be connected
     // Monitors pull socket
     // Should run in separate thread or by using concurrency
-    void newConnectionsMonitor();
+    [[noreturn]] void newConnectionsMonitor();
 };
 
 
