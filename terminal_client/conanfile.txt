@@ -1,0 +1,8 @@
+[requires]
+libsodium/1.0.18
+zeromq/4.3.4
+zmqpp/4.2.0
+
+[generators]
+cmake
+
