@@ -37,6 +37,10 @@ void Server::configurePullSocketEndPoint() {
 
     std::string result(ipBuffer);
     pullSocket.bind("tcp://" + std::string(ipBuffer) + ":4040");
+
+    // TODO: add std::format
+    logger.log(std::string("Pull socket has been binded at ") +
+               std::string("tcp://" + std::string(ipBuffer) + ":4040"));
 }
 
 
