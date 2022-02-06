@@ -15,7 +15,7 @@ public:
     TerminalClient() = default;
 
     // Connect to server via specified address
-    void connectToServer(const std::string &serverAdress);
+    void connectToServer(const std::string &serverAddress);
 
     // Main function to communicate with server
     void run();
