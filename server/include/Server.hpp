@@ -8,6 +8,8 @@
 #include <string>
 #include <zmqpp/zmqpp.hpp>
 
+#include "../include/Logger.hpp"
+
 
 class Server {
 public:
@@ -24,6 +26,9 @@ private:
 
     // Used for monitoring new connections
     zmqpp::socket pullSocket{context, zmqpp::socket_type::pull};
+
+    // To log everything important
+    Logger logger{};
 
     // Private constructor & instance for singleton pattern
     Server() = default;
