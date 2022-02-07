@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <thread>
 #include <arpa/inet.h>
+#include <fmt/format.h>
 
 #include "../include/Server.hpp"
 
@@ -38,9 +39,7 @@ void Server::configurePullSocketEndPoint() {
     std::string result(ipBuffer);
     pullSocket.bind("tcp://" + std::string(ipBuffer) + ":4040");
 
-    // TODO: add std::format
-    logger.log(std::string("Pull socket has been binded at ") +
-               std::string("tcp://" + std::string(ipBuffer) + ":4040"));
+    logger.log(fmt::format("Pull socket has been binded at tcp://{}:4040", ipBuffer));
 }
 
 
