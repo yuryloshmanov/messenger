@@ -58,5 +58,7 @@ void Server::run() {
 
         std::string str;
         message >> str;
+
+        std::cout << str << std::endl;
     }
 }
