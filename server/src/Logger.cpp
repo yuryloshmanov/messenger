@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
+#include <fmt/format.h>
 
 #include "../include/Logger.hpp"
 
 
 void Logger::log(const std::string &message) {
-    // TODO: add std::format
-    std::cout << "LOG: " << message << std::endl;
+    std::cout << fmt::format("LOG: {}", message) << std::endl;
 }
