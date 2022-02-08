@@ -12,7 +12,7 @@ class Logger {
 public:
     Logger() = default;
 
-    static void log(const std::string &message);
+    static void consoleLog(const std::string &message);
 };
 
 
