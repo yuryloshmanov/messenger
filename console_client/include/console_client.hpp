@@ -2,17 +2,17 @@
 // Created by Yury Loshmanov on 06.02.2022.
 //
 
-#ifndef TERMINAL_CLIENT_TERMINAL_CLIENT_HPP
-#define TERMINAL_CLIENT_TERMINAL_CLIENT_HPP
+#ifndef CONSOLE_CLIENT_CONSOLE_CLIENT_HPP
+#define CONSOLE_CLIENT_CONSOLE_CLIENT_HPP
 
 #include <string>
 #include <zmqpp/zmqpp.hpp>
 
 
-class TerminalClient {
+class ConsoleClient {
 public:
     // Default constructor
-    TerminalClient() = default;
+    consoleClient() = default;
 
     // Connect to server via specified address
     void connectToServer(const std::string &serverAddress);
@@ -28,4 +28,4 @@ private:
 };
 
 
-#endif //TERMINAL_CLIENT_TERMINAL_CLIENT_HPP
+#endif //CONSOLE_CLIENT_CONSOLE_CLIENT_HPP
