@@ -12,7 +12,7 @@
 class ConsoleClient {
 public:
     // Default constructor
-    consoleClient() = default;
+    ConsoleClient() = default;
 
     // Connect to server via specified address
     void connectToServer(const std::string &serverAddress);
