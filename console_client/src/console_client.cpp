@@ -40,8 +40,6 @@ void ConsoleClient::connectToServer(const std::string &serverAddress) {
 
 void ConsoleClient::run() {
     zmqpp::message message;
-    std::string str = "Hello, ZeroMQ!";
-
-    message << str;
+    message << getAddress();
     pushSocket.send(message);
 }
