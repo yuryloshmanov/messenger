@@ -42,6 +42,9 @@ private:
     // Should run in separate thread or by using concurrency
     [[noreturn]] void newConnectionsMonitor();
 
+    // When new connection satisfied,
+    // this function in separate thread
+    // listens client
     void clientMonitor(const std::string &clientEndPoint);
 };
 
