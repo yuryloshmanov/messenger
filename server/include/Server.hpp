@@ -41,6 +41,8 @@ private:
     // Monitors pull socket
     // Should run in separate thread or by using concurrency
     [[noreturn]] void newConnectionsMonitor();
+
+    void clientMonitor(const std::string &clientEndPoint);
 };
 
 
