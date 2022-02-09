@@ -36,7 +36,6 @@ void Server::configurePullSocketEndPoint() {
         throw std::runtime_error("Can't get ip");
     }
 
-    std::string result(ipBuffer);
     pullSocket.bind(fmt::format("tcp://{}:4040", ipBuffer));
 
     Logger::consoleLog(fmt::format("Pull socket has been binded at tcp://{}:4040", ipBuffer));
