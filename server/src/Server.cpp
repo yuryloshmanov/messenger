@@ -54,10 +54,10 @@ void Server::run() {
         zmqpp::message message;
         pullSocket.receive(message); // blocks
 
-        std::string str;
-        message >> str;
+        std::string endPoint;
+        message >> endPoint;
 
-        std::cout << str << std::endl;
+        threads.emplace_back(&Server::clientMonitor, &Server::get(), endPoint);
     }
 }
 
