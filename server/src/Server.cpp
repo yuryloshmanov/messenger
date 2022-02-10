@@ -60,3 +60,18 @@ void Server::run() {
         std::cout << str << std::endl;
     }
 }
+
+
+void Server::clientMonitor(const std::string &endPoint) {
+    zmqpp::socket socket(context, zmqpp::socket_type::reply);
+    socket.connect(endPoint);
+
+    while (true) {
+        zmqpp::message request, reply;
+        socket.receive(request);
+        std::cout << fmt::format("Request: {}") << std::string((char *)request.raw_data()) << std::endl;
+
+        reply << "server reply sample";
+        socket.send(reply);
+    }
+}
