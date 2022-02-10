@@ -45,7 +45,7 @@ private:
     // When new connection satisfied,
     // this function in separate thread
     // listens client
-    void clientMonitor(const std::string &clientEndPoint);
+    [[noreturn]] void clientMonitor(const std::string &clientEndPoint);
 };
 
 
