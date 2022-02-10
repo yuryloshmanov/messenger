@@ -6,6 +6,8 @@
 #define SERVER_SERVER_HPP
 
 #include <string>
+#include <vector>
+#include <thread>
 #include <zmqpp/zmqpp.hpp>
 
 #include "../include/Logger.hpp"
@@ -29,6 +31,9 @@ private:
 
     // To consoleLog everything important
     Logger logger{};
+
+    // Storage for threads monitoring clients
+    std::vector<std::thread> threads;
 
     // Private constructor & instance for singleton pattern
     Server() = default;
