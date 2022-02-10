@@ -6,6 +6,7 @@
 #define CONSOLE_CLIENT_CONSOLE_CLIENT_HPP
 
 #include <string>
+#include <thread>
 #include <zmqpp/zmqpp.hpp>
 
 
