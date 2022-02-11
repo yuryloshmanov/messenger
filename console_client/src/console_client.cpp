@@ -39,6 +39,7 @@ void ConsoleClient::connectToServer(const std::string &serverAddress) {
 
 
 void ConsoleClient::run() {
+    zmqpp::socket socket(context, zmqpp::socket_type::request);
     zmqpp::message message;
     message << getAddress();
     pushSocket.send(message);
