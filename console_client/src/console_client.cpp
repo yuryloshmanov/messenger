@@ -52,7 +52,7 @@ void ConsoleClient::run() {
         request << "client request sample";
         socket.send(request);
 
-        std::cout << fmt::format("Reply: {}", std::string((char *)reply.raw_data())) << std::endl;
+        std::cout << fmt::format("Reply: {}", std::string(static_cast<const char *>(reply.raw_data()))) << std::endl;
         socket.receive(reply);
     }
 }
