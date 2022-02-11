@@ -41,7 +41,18 @@ void ConsoleClient::connectToServer(const std::string &serverAddress) {
 void ConsoleClient::run() {
     const auto address = getAddress();
     zmqpp::socket socket(context, zmqpp::socket_type::request);
+    socket.bind(address);
+
     zmqpp::message message;
     message << address;
     pushSocket.send(message);
+
+    while (true) {
+        zmqpp::message request, reply;
+        request << "client request sample";
+        socket.send(request);
+
+        std::cout << fmt::format("Reply: {}", std::string((char *)reply.raw_data())) << std::endl;
+        socket.receive(reply);
+    }
 }
