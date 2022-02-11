@@ -19,7 +19,7 @@ public:
     void connectToServer(const std::string &serverAddress);
 
     // Main function to communicate with server
-    void run();
+    [[noreturn]] void run();
 
 private:
     zmqpp::context context{};
