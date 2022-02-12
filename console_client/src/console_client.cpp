@@ -52,9 +52,9 @@ void ConsoleClient::run() {
         request << "client request sample";
         socket.send(request);
 
+        socket.receive(reply);
         std::string str;
         reply >> str;
         std::cout << fmt::format("Reply: {}", str) << std::endl;
-        socket.receive(reply);
     }
 }
