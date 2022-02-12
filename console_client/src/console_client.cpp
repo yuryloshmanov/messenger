@@ -29,7 +29,7 @@ std::string getAddress() {
         throw std::runtime_error("Can't get ip");
     }
 
-    return fmt::format("tcp://{}:4040", ipBuffer);
+    return fmt::format("tcp://{}:5050", ipBuffer);
 }
 
 
@@ -52,7 +52,9 @@ void ConsoleClient::run() {
         request << "client request sample";
         socket.send(request);
 
-        std::cout << fmt::format("Reply: {}", std::string(static_cast<const char *>(reply.raw_data()))) << std::endl;
+        std::string str;
+        reply >> str;
+        std::cout << fmt::format("Reply: {}", str) << std::endl;
         socket.receive(reply);
     }
 }
