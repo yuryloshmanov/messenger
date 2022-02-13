@@ -5,9 +5,12 @@
 #ifndef SERVER_MESSAGE_HPP
 #define SERVER_MESSAGE_HPP
 
+#include "MessageType.hpp"
+
 
 class Message {
-    
+public:
+    MessageType messageType;
 };
 
 
