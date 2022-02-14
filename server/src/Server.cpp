@@ -67,13 +67,26 @@ void Server::clientMonitor(const std::string &endPoint) {
     socket.connect(endPoint);
 
     while (true) {
-        zmqpp::message request, reply;
+        zmqpp::message request;
         socket.receive(request);
-        std::string str;
-        request >> str;
-        std::cout << fmt::format("Request: {}", str) << std::endl;
+        msgpack::unpacked unpacked;
+        msgpack::unpack(unpacked, static_cast<const char *>(request.raw_data()), request.size(0));
+        Message requestMsg;
+        unpacked.get().convert(requestMsg);
 
-        reply << std::string("server reply sample");
-        socket.send(reply);
+        if (requestMsg.messageType == MessageType::Heartbeat) {
+            Logger::consoleLog("Heartbeat received");
+        }
+        
     }
+//    while (true) {
+//        zmqpp::message request, reply;
+//        socket.receive(request);
+//        std::string str;
+//        request >> str;
+//        std::cout << fmt::format("Request: {}", str) << std::endl;
+//
+//        reply << std::string("server reply sample");
+//        socket.send(reply);
+//    }
 }
