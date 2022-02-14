@@ -10,6 +10,7 @@
 #include <thread>
 #include <zmqpp/zmqpp.hpp>
 
+#include "../include/Message/Message.hpp"
 #include "../include/Logger.hpp"
 
 
