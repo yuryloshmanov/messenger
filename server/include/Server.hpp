@@ -17,7 +17,10 @@
 class Server {
 public:
 
-    // Get instance of Server class
+    /**
+     * Get instance of Server class
+     * @return reference to server
+     */
     static Server &get();
 
     // Main function for server
