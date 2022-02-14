@@ -5,6 +5,9 @@
 #ifndef SERVER_MESSAGE_HPP
 #define SERVER_MESSAGE_HPP
 
+#include <msgpack.hpp>
+
+
 #include "MessageType.hpp"
 
 
