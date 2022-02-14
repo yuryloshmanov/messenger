@@ -7,13 +7,14 @@
 
 #include <msgpack.hpp>
 
-
 #include "MessageType.hpp"
 
 
 class Message {
 public:
     MessageType messageType;
+
+    MSGPACK_DEFINE (messageType)
 };
 
 
