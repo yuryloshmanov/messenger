@@ -25,37 +25,39 @@ public:
      */
     static Server &get();
 
-    // Main function for server
-    // Starts server
+    /// Starts server
     void run();
 
 private:
     zmqpp::context context{};
 
-    // Used for monitoring new connections
+    /// Used for monitoring new connections
     zmqpp::socket pullSocket{context, zmqpp::socket_type::pull};
 
-    // To consoleLog everything important
+    /// To consoleLog everything important
     Logger logger{};
 
-    // Storage for threads monitoring clients
+    /// Storage for threads monitoring clients
     std::vector<std::thread> threads;
 
-    // Private constructor & instance for singleton pattern
+    /// Private constructor & instance for singleton pattern
     Server() = default;
 
-    // Configuration for server pull socket end point
-    // Using current ip-address
+    /// Configuration for server pull socket end point using current ip-address
     void configurePullSocketEndPoint();
 
-    // Waits for new clients to be connected
-    // Monitors pull socket
-    // Should run in separate thread or by using concurrency
+    /**
+    * Waits for new clients to be connected
+    * Monitors pull socket
+    * Should run in separate thread or by using concurrency
+    */
     [[noreturn]] void newConnectionsMonitor();
 
-    // When new connection satisfied,
-    // this function in separate thread
-    // listens client
+    /**
+    * When new connection satisfied,
+    * this function in separate thread
+    * listens client
+    */
     [[noreturn]] void clientMonitor(const std::string &clientEndPoint);
 };
 
