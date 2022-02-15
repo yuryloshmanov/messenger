@@ -1,7 +1,8 @@
-//
-// Created by Yury Loshmanov on 02.02.2022.
-//
-
+/**
+ * @file Server.cpp
+ * @date 2 Feb 2022
+ * @author Yury Loshmanov
+ */
 #include <netdb.h>
 #include <unistd.h>
 #include <thread>
