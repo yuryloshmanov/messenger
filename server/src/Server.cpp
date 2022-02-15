@@ -72,7 +72,7 @@ void Server::clientMonitor(const std::string &endPoint) {
         socket.receive(request);
         msgpack::unpacked unpacked;
         msgpack::unpack(unpacked, static_cast<const char *>(request.raw_data()), request.size(0));
-        Message requestMsg;
+        Message requestMsg{};
         unpacked.get().convert(requestMsg);
 
         if (requestMsg.messageType == MessageType::Heartbeat) {
