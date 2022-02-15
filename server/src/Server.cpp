@@ -78,7 +78,15 @@ void Server::clientMonitor(const std::string &endPoint) {
         if (requestMsg.messageType == MessageType::Heartbeat) {
             Logger::consoleLog("Heartbeat received");
         }
-        
+
+        zmqpp::message reply;
+        msgpack::sbuffer buffer;
+        Message replyMsg = {MessageType::Heartbeat};
+
+        msgpack::pack(&buffer, reply);
+        reply.add_raw(buffer.data(), buffer.size());
+
+        socket.send(reply);
     }
 //    while (true) {
 //        zmqpp::message request, reply;
