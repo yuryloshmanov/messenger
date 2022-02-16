@@ -50,7 +50,7 @@ void Server::run() {
 }
 
 
-[[noreturn]] void Server::newConnectionsMonitor() {
+void Server::newConnectionsMonitor() {
     while (true) {
         zmqpp::message message;
         pullSocket.receive(message); // blocks
