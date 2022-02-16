@@ -10,6 +10,9 @@
 
 #include "../include/console_client.hpp"
 
+// TODO: Make shared lib
+#include "../../server/include/Message/Message.hpp"
+
 
 std::string getAddress() {
     char buffer[256];
