@@ -83,7 +83,7 @@ void Server::clientMonitor(const std::string &endPoint) {
         msgpack::sbuffer buffer;
         Message replyMsg = {MessageType::Heartbeat};
 
-        msgpack::pack(&buffer, reply);
+        msgpack::pack(&buffer, replyMsg);
         reply.add_raw(buffer.data(), buffer.size());
 
         socket.send(reply);
