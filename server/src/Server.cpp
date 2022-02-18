@@ -53,7 +53,7 @@ void Server::run() {
 void Server::newConnectionsMonitor() {
     while (true) {
         zmqpp::message message;
-        pullSocket.receive(message); // blocks
+        pullSocket.receive(message);
 
         std::string endPoint;
         message >> endPoint;
@@ -88,14 +88,4 @@ void Server::clientMonitor(const std::string &endPoint) {
 
         socket.send(reply);
     }
-//    while (true) {
-//        zmqpp::message request, reply;
-//        socket.receive(request);
-//        std::string str;
-//        request >> str;
-//        std::cout << fmt::format("Request: {}", str) << std::endl;
-//
-//        reply << std::string("server reply sample");
-//        socket.send(reply);
-//    }
 }
