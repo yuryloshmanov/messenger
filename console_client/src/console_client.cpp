@@ -1,7 +1,8 @@
-//
-// Created by Yury Loshmanov on 06.02.2022.
-//
-
+/**
+ * @file console_client.cpp
+ * @date 6 Feb 2022
+ * @author Yury Loshmanov
+ */
 #include <netdb.h>
 #include <unistd.h>
 #include <msgpack.hpp>
