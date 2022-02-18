@@ -52,13 +52,20 @@ void ConsoleClient::run() {
     pushSocket.send(message);
 
     while (true) {
-        zmqpp::message request, reply;
-        request << "client request sample";
-        socket.send(request);
+        zmqpp::message reply;
+        msgpack::sbuffer buffer;
+        Message replyMsg = {MessageType::Heartbeat};
 
-        socket.receive(reply);
-        std::string str;
-        reply >> str;
-        std::cout << fmt::format("Reply: {}", str) << std::endl;
+        msgpack::pack(&buffer, replyMsg);
+        reply.add_raw(buffer.data(), buffer.size());
+
+        socket.send(reply);
+
+        zmqpp::message request;
+        socket.receive(request);
+        msgpack::unpacked unpacked;
+        msgpack::unpack(unpacked, static_cast<const char *>(request.raw_data()), request.size(0));
+        Message requestMsg{};
+        unpacked.get().convert(requestMsg);
     }
 }
