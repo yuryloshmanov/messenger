@@ -1,7 +1,8 @@
-//
-// Created by Yury Loshmanov on 02.02.2022.
-//
-
+/**
+ * @file Database.hpp
+ * @date 2 Feb 2022
+ * @author Yury Loshmanov
+ */
 #ifndef SERVER_DATABASE_HPP
 #define SERVER_DATABASE_HPP
 
