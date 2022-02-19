@@ -6,4 +6,7 @@
 #ifndef SERVER_POSTGRESQL_PROXY_HPP
 #define SERVER_POSTGRESQL_PROXY_HPP
 
+#include "DatabaseProxy.hpp"
+
+
 #endif //SERVER_POSTGRESQL_PROXY_HPP
