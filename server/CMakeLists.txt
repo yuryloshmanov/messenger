@@ -10,6 +10,6 @@ conan_basic_setup()
 add_library(liblogger STATIC include/Logger.hpp src/Logger.cpp)
 add_library(libserver STATIC src/Server.cpp include/Server.hpp)
 
-add_executable(server main.cpp include/Server.hpp include/DatabaseProxy.hpp src/DatabaseProxy.cpp)
+add_executable(server main.cpp include/Server.hpp include/DatabaseProxy/DatabaseProxy.hpp src/DatabaseProxy/DatabaseProxy.cpp)
 
 target_link_libraries(server liblogger libserver ${CONAN_LIBS})
