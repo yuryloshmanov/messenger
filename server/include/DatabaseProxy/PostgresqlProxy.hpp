@@ -9,4 +9,9 @@
 #include "DatabaseProxy.hpp"
 
 
+class PostgresqlProxy : public DatabaseProxy {
+
+};
+
+
 #endif //SERVER_POSTGRESQL_PROXY_HPP
