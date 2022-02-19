@@ -15,7 +15,7 @@ class Message {
 public:
     MessageType messageType;
 
-    MSGPACK_DEFINE (messageType)
+    MSGPACK_DEFINE(messageType)
 };
 
 
