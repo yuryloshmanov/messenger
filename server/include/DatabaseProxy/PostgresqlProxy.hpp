@@ -1,0 +1,8 @@
+//
+// Created by Yury Loshmanov on 19.02.2022.
+//
+
+#ifndef SERVER_POSTGRESQLPROXY_HPP
+#define SERVER_POSTGRESQLPROXY_HPP
+
+#endif //SERVER_POSTGRESQLPROXY_HPP
