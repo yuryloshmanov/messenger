@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "include/Server.hpp"
+#include "../include/Server.hpp"
 
 
 int main() {
