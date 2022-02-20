@@ -7,10 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_library(liblogger STATIC include/Logger.hpp src/Logger.cpp)
-add_library(libserver STATIC src/Server.cpp include/Server.hpp)
-
-add_executable(server main.cpp include/Server.hpp include/DatabaseProxy/DatabaseProxy.hpp src/DatabaseProxy/DatabaseProxy.cpp)
-
-#target_link_libraries(server liblogger libserver ${CONAN_LIBS})
-target_link_libraries(server liblogger libserver ${CONAN_LIBS_LIBSODIUM} ${CONAN_LIBS_ZMQPP} ${CONAN_LIBS_ZEROMQ} ${CONAN_LIBS_FMT})
+add_subdirectory(src)
