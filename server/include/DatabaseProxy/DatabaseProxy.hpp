@@ -21,7 +21,12 @@ public:
      */
     virtual bool addUser(const std::string &username) = 0;
 
-    virtual bool checkIfUserExists(std::uint64_t userId) = 0;
+    /**
+     * Checks if user exists in database
+     * @param userId
+     * @return true if user exists, false if not
+     */
+    virtual bool checkIfUserExists(const std::uint64_t &userId) = 0;
 
 private:
 
