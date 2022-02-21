@@ -7,6 +7,7 @@
 #define SERVER_DATABASE_PROXY_HPP
 
 
+#include <pqxx/pqxx>
 #include <string>
 // TODO: Make thread-safe
 #include <mutex>
