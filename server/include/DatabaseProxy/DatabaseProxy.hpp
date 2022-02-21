@@ -7,9 +7,13 @@
 #define SERVER_DATABASE_PROXY_HPP
 
 
+#include <string>
+
+
 class DatabaseProxy {
 public:
-
+    virtual void addUser(const std::string &username) = 0;
+    
 private:
 
 };
