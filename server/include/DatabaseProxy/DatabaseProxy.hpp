@@ -14,6 +14,11 @@
 
 class DatabaseProxy {
 public:
+    /**
+     * Add user to database
+     * @param username must be unique
+     * @return true if user successfully added, false if user with this username already exists
+     */
     virtual bool addUser(const std::string &username) = 0;
 
     virtual bool checkIfUserExists(std::uint64_t userId) = 0;
