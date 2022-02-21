@@ -8,6 +8,8 @@
 
 
 #include <string>
+// TODO: Make thread-safe
+#include <mutex>
 
 
 class DatabaseProxy {
