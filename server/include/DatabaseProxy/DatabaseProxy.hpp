@@ -14,7 +14,7 @@
 
 class DatabaseProxy {
 public:
-    virtual void addUser(const std::string &username) = 0;
+    virtual bool addUser(const std::string &username) = 0;
 
     virtual bool checkIfUserExists(std::uint64_t userId) = 0;
 
