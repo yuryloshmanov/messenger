@@ -13,6 +13,8 @@
 
 
 class PostgresqlProxy : public DatabaseProxy {
+    pqxx::connection connection;
+
 public:
     PostgresqlProxy(const std::string &endPoint);
 };
