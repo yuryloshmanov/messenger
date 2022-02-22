@@ -10,7 +10,7 @@
 
 
 class PostgresqlProxy : public DatabaseProxy {
-
+    PostgresqlProxy(const std::string &endPoint);
 };
 
 
