@@ -4,3 +4,9 @@
  * @author Yury Loshmanov
  */
 
+#include "../../include/DatabaseProxy/PostgresqlProxy.hpp"
+
+PostgresqlProxy::PostgresqlProxy(const std::string &endPoint) {
+
+}
+
