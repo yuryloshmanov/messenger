@@ -11,6 +11,7 @@ add_executable(server main.cpp ../include/Server.hpp ../include/DatabaseProxy/Da
 
 target_link_libraries(server
         liblogger
+        libdatabase
         libserver
         ${CONAN_LIBS_LIBSODIUM}
         ${CONAN_LIBS_ZMQPP}
