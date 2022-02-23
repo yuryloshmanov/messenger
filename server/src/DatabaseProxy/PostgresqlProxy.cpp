@@ -6,7 +6,7 @@
 
 #include "../../include/DatabaseProxy/PostgresqlProxy.hpp"
 
-PostgresqlProxy::PostgresqlProxy(const std::string &endPoint): connection(endPoint) {
+PostgresqlProxy::PostgresqlProxy(const std::string &endPoint): connection(endPoint), work(connection) {
 
 }
 
