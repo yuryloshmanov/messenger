@@ -9,4 +9,3 @@
 PostgresqlProxy::PostgresqlProxy(const std::string &endPoint): connection(endPoint), work(connection) {
 
 }
-
