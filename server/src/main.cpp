@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @date 2 Feb 2022
+ * @author Yury Loshmanov
+ */
 #include <iostream>
 
 #include "../include/Server.hpp"
