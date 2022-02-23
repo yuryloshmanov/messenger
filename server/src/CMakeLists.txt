@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(liblogger STATIC ../include/Logger.hpp Logger.cpp)
 add_library(libserver STATIC Server.cpp ../include/Server.hpp)
+add_library(libdatabaseproxy STATIC ../include/DatabaseProxy/PostgresqlProxy.hpp DatabaseProxy/PostgresqlProxy.cpp)
 
 add_executable(server main.cpp ../include/Server.hpp ../include/DatabaseProxy/DatabaseProxy.hpp DatabaseProxy/DatabaseProxy.cpp)
 
