@@ -1,7 +1,8 @@
-//
-// Created by Yury Loshmanov on 06.02.2022.
-//
-
+/**
+ * @file Logger.cpp
+ * @date 6 Feb 2022
+ * @author Yury Loshmanov
+ */
 #include <iostream>
 #include <fmt/format.h>
 
