@@ -1,7 +1,8 @@
-//
-// Created by Yury Loshmanov on 06.02.2022.
-//
-
+/**
+ * @file Logger.hpp
+ * @date 6 Feb 2022
+ * @author Yury Loshmanov
+ */
 #ifndef SERVER_LOGGER_HPP
 #define SERVER_LOGGER_HPP
 
