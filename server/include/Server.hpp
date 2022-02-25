@@ -13,7 +13,7 @@
 #include <memory>
 #include <zmqpp/zmqpp.hpp>
 
-#include "../include/DatabaseProxy/PostgresqlProxy.hpp"
+#include "../include/DatabaseProxy/DatabaseProxy.hpp"
 #include "../include/Message/Message.hpp"
 #include "../include/Logger.hpp"
 
