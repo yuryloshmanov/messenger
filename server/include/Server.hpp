@@ -30,9 +30,11 @@ public:
     /// Starts server
     void run();
 
+    static void setDatabaseProxy(const std::unique_ptr<DatabaseProxy> &databaseProxy);
+
 private:
     /// Pointer to database proxy
-    std::unique_ptr<DatabaseProxy> databaseProxy;
+    static std::unique_ptr<DatabaseProxy> databaseProxy;
 
     zmqpp::context context{};
 
