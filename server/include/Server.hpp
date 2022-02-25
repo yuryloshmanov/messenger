@@ -31,8 +31,9 @@ public:
     void run();
 
 private:
+    /// Pointer to database proxy
     std::unique_ptr<DatabaseProxy> databaseProxy;
-    
+
     zmqpp::context context{};
 
     /// Used for monitoring new connections
