@@ -18,6 +18,11 @@ class PostgresqlProxy : public DatabaseProxy {
 
 public:
     PostgresqlProxy(const std::string &endPoint);
+
+    bool addUser(const std::string &username);
+
+    bool checkIfUserExists(const std::uint64_t &userId);
+
 };
 
 
