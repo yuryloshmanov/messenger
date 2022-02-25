@@ -31,6 +31,8 @@ public:
     void run();
 
 private:
+    std::unique_ptr<DatabaseProxy> databaseProxy;
+    
     zmqpp::context context{};
 
     /// Used for monitoring new connections
