@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <thread>
+#include <memory>
 #include <zmqpp/zmqpp.hpp>
 
 #include "../include/DatabaseProxy/PostgresqlProxy.hpp"
