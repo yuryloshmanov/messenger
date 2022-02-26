@@ -6,8 +6,14 @@
 #ifndef SERVER_CONFIGPARSER_HPP
 #define SERVER_CONFIGPARSER_HPP
 
+#include <string>
+#include <boost/json.hpp>
 
 
+class ConfigParser {
+public:
+    ConfigParser(const std::string &configFilePath);
+};
 
 
 #endif //SERVER_CONFIGPARSER_HPP
