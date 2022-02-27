@@ -17,7 +17,7 @@ target_link_libraries(server
         ${CONAN_LIBS_ZMQPP}
         ${CONAN_LIBS_ZEROMQ}
         ${CONAN_LIBS_FMT}
-        ${CONAN_LIBS_LIBPQXX}
         ${CONAN_LIBS_LIBPQ}
+        ${CONAN_LIBS_LIBPQXX}
         ${CONAN_LIBS_BOOST}
         )
