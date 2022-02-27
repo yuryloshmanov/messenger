@@ -3,9 +3,10 @@
  * @date 27 Feb 2022
  * @author Yury Loshmanov
  */
+#include <iostream>
+#include <gtest/gtest.h>
 
 
-int main() {
-
-    return 0;
+TEST(test, test) {
+    std::cout << "hello" << std::endl;
 }
