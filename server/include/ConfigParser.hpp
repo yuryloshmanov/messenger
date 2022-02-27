@@ -12,7 +12,7 @@
 
 class ConfigParser {
 public:
-    ConfigParser(const std::string &configFilePath);
+    ConfigParser(const std::string &configFilePath = "config.json");
 };
 
 
