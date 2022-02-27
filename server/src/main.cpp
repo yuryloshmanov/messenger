@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "../include/Server.hpp"
+#include "../include/ConfigParser.hpp"
 #include "../include/DatabaseProxy/PostgresqlProxy.hpp"
 
 
