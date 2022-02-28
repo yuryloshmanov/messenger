@@ -26,8 +26,5 @@ ConfigParser::ConfigParser(const std::string &configFilePath) {
 
     boost::property_tree::ptree pTree;
     boost::property_tree::read_json(ss, pTree);
-
-    auto v = pTree.get_child("PostgresURL").front();
-    std::cout << v.first;
 }
 
