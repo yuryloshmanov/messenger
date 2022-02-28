@@ -10,7 +10,6 @@
 #include <sstream>
 #include <iostream>
 #include <boost/foreach.hpp>
-#include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
 
@@ -24,7 +23,6 @@ ConfigParser::ConfigParser(const std::string &configFilePath) {
             std::ostream_iterator<char>(ss)
     );
 
-    boost::property_tree::ptree pTree;
     boost::property_tree::read_json(ss, pTree);
 }
 

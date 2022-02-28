@@ -8,6 +8,7 @@
 
 #include <string>
 #include <boost/json.hpp>
+#include <boost/property_tree/ptree.hpp>
 
 
 class ConfigParser {
@@ -15,6 +16,9 @@ public:
     ConfigParser(const std::string &configFilePath = "config.json");
 
     std::string getPostgresqlURL();
+
+protected:
+    boost::property_tree::ptree pTree;
 };
 
 
