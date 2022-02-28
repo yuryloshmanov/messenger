@@ -13,6 +13,8 @@
 class ConfigParser {
 public:
     ConfigParser(const std::string &configFilePath = "config.json");
+
+    std::string getPostgresqlURL();
 };
 
 
