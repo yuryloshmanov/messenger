@@ -9,7 +9,7 @@
 #include "../include/ConfigParser.hpp"
 
 
-TEST(ConfigParser, PostresqlURL) {
+TEST(ConfigParser, PostgresqlURL) {
     system(
             "echo '{\n"
             "  \"PostgresqlURL\": \"jdbc:postgresql://localhost:5432/postgres\"\n"
