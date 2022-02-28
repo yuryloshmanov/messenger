@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(test test.cpp)
 
-target_link_libraries(test ${CONAN_LIBS_GTEST})
+target_link_libraries(test LIBCONFIGPARSER ${CONAN_LIBS_GTEST})
