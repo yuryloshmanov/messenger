@@ -26,3 +26,7 @@ ConfigParser::ConfigParser(const std::string &configFilePath) {
     boost::property_tree::read_json(ss, pTree);
 }
 
+
+std::string ConfigParser::getPostgresqlURL() {
+    return pTree.get<std::string>("PostgresqlURL");
+}
