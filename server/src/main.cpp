@@ -12,10 +12,12 @@
 
 
 int main() {
+    ConfigParser configParser;
+    
     try {
         Server::get().run();
         // TODO: Move endPoint to config file
-        Server::setDatabaseProxy(std::make_unique<PostgresqlProxy>(""));
+        Server::setDatabaseProxy(std::make_unique<PostgresqlProxy>(configParser.getPostgresqlURL()));
     } catch (std::runtime_error &error) {
         std::cout << error.what() << std::endl;
 
