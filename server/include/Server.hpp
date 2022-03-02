@@ -30,7 +30,8 @@ public:
     /// Starts server
     void run();
 
-    static void setDatabaseProxy(const std::unique_ptr<DatabaseProxy> &databaseProxy);
+    template<class DbType>
+    static void setDatabaseProxyType();
 
 private:
     /// Pointer to database proxy
