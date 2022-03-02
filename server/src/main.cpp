@@ -14,7 +14,7 @@ int main() {
     ConfigParser configParser;
     
     try {
-        Server::setDatabaseProxy(std::make_unique<PostgresqlProxy>(configParser.getPostgresqlURL()));
+        Server::setDatabaseProxyType<PostgresqlProxy>();
         Server::get().run();
     } catch (std::runtime_error &error) {
         std::cout << error.what() << std::endl;
