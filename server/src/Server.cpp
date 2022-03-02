@@ -89,3 +89,9 @@ void Server::clientMonitor(const std::string &endPoint) {
         socket.send(reply);
     }
 }
+
+
+template<class DbType>
+void Server::setDatabaseProxyType() {
+    databaseProxy = std::unique_ptr<DbType>();
+}
