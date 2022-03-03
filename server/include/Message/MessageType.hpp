@@ -13,4 +13,5 @@ enum class MessageType {
 
 MSGPACK_ADD_ENUM(MessageType)
 
+
 #endif //SERVER_MESSAGE_TYPE_HPP

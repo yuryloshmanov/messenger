@@ -12,7 +12,7 @@
 
 int main() {
     ConfigParser configParser;
-    
+
     try {
         Server::setDatabaseProxyType<PostgresqlProxy>();
         Server::get().run();
